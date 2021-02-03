@@ -1,0 +1,38 @@
+<mat-toolbar>
+    <span>New Employee</span>
+    <a class="btn-dialog-close" mat-stroked-button  tabIndex = "-1" (click) = "onClose()">
+        <mat-icon>clear</mat-icon>
+    </a>
+</mat-toolbar>
+
+<div class="container">
+        <mat-card class="create-card">
+        <form [formGroup] = "authForm"class="create-form" (ngSubmit) = "onSubmit()">
+            <mat-form-field class="create-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName = "name"/>
+                <mat-error>Name Required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="create-full-width">
+                    <mat-label>Salary</mat-label>
+                    <input matInput formControlName = "salary"/>
+                    <mat-error>Salary Required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="create-full-width">
+                        <mat-label>Age</mat-label>
+                        <input matInput formControlName = "age"/>
+                        <mat-error>Age Required</mat-error>
+                    </mat-form-field>
+    
+          
+            <button mat-raised-button color="primary" type = "submit" class="btn" [disabled]="!authForm.valid" (click) = "onClose()">Create</button>
+        </form>
+        </mat-card>
+        </div>
+        
+        
+        
+        
+        
+        

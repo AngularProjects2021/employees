@@ -1,0 +1,77 @@
+/* reset web browser */
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body {
+    font-family:'Robot',sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}
+/* Utility Classes */
+.text-primary {
+    color:#3f51b5;
+ }
+ .l-heading {
+    font-size: 4rem;
+    padding-bottom: 0.75rem;
+    line-height: 1.1;
+ }
+ .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+.btn {
+    display: inline-block;
+    color:#fff;
+    background: #3f51b5;
+    padding:0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: #3f51b5;
+}
+
+#navbar {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    position:sticky;
+    top:0;
+    z-index: 1;
+    color:#fff;
+    background: #52BD9D;
+    padding: 1rem;
+}
+@media only screen and (max-width: 600px) {
+    #navbar {
+        flex-direction: column;
+    }
+}
+#navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+#navbar ul li a {
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+    cursor: pointer;
+}
+#navbar ul li a:hover {
+    background:#3f51b5;
+    border-radius: 5%;
+}
+
+/* #navbar .logo {
+    background-image: url('../assets/image/logo.jpg');
+    background-size: cover;
+    height: 100px;
+    width:200px;
+  } */

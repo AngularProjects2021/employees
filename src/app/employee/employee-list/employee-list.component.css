@@ -1,0 +1,21 @@
+table {
+    width: 90%;
+    margin: auto;
+  }
+
+  mat-paginator {
+    width: 90%;
+    margin: auto;
+  }
+
+  .create-div {
+    margin: auto 50px;
+    padding:10px;
+  }
+  @media only screen and (max-width: 600px) {
+    .create-div {
+      margin: 10px;
+      padding:10px;
+    }
+}
+  

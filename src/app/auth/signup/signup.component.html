@@ -1,0 +1,27 @@
+<div class="container">
+<mat-card class="signup-card">
+    <mat-card-header>
+        <mat-card-title class="center">Sing Up </mat-card-title>
+    </mat-card-header>
+<form [formGroup] = "authForm"class="signup-form" >
+    <mat-form-field class="signup-full-width">
+        <mat-label>User Name</mat-label>
+        <input matInput formControlName = "username"/>
+    </mat-form-field>
+    <mat-form-field class="signup-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput formControlNmae = "password"/>
+    </mat-form-field>
+    <mat-form-field class="signup-full-width">
+        <mat-label>Password Confirmation</mat-label>
+        <input matInput formControlNmae = "passwordConfirmation"/>
+    </mat-form-field>
+    <button mat-raised-button color="accent" class="btn">Signup</button>
+</form>
+</mat-card>
+</div>
+
+
+
+
+

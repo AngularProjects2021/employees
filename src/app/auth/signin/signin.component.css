@@ -1,0 +1,27 @@
+.signup-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .signup-full-width {
+    width: 100%;
+  }
+  .container {
+    display: flex;
+    text-align: center;
+    align-items: center;  
+    justify-content: center;
+    background: #52BD9D;
+    min-height: 100vh;
+  }
+  .signup-card {
+    max-width: 400px;
+    margin: 15px;
+    height: 300px;
+    text-align: center;
+    align-content: center;
+  }
+ .btn {
+   width: 100%;
+ }

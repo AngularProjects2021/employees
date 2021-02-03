@@ -1,0 +1,63 @@
+<div class="create-div">
+    <button mat-raised-button (click)="openDialog()">
+        <mat-icon>add</mat-icon>Create
+    </button>
+</div>
+
+<table mat-table [dataSource]="em_data" matSort class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header > No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="employee_name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header > Employee Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.employee_name}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="employee_salary">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Salary </th>
+    <td mat-cell *matCellDef="let element"> {{element.employee_salary}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="employee_age">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Age </th>
+    <td mat-cell *matCellDef="let element"> {{element.employee_age}} </td>
+  </ng-container>
+
+  <!-- Delete Column -->
+  <ng-container matColumnDef="deleteEmployee">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="primary">
+            <mat-icon class="material-icons" >     
+                    preview
+            </mat-icon>
+        </button>
+       <button mat-icon-button color="warn" (click) = "onDelete(element.employee_name)">
+            <mat-icon class="material-icons">
+                    delete
+            </mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [length]="100"
+[pageSize]="10"
+[pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+
+<br><br><br><br>
+
+{{ em_data | json }}
